@@ -22,6 +22,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+from . import __version__
+
 
 if __name__ == '__main__':
-  print("Yea, it's working! You're using pynepcord version 1.0.0")
+  print("Yea, it's working! You're using pynepcord version " + __version__)

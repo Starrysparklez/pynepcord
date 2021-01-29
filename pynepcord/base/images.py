@@ -28,6 +28,7 @@ from random import choice
 
 from pynepcord import CATEGORIES
 from pynepcord import IMAGES_API
+from pynepcord import __version__
 from pynepcord.models import ImageResponse
 from pynepcord.errors import InvalidCategory
 from pynepcord.errors import Unauthorized
@@ -105,7 +106,7 @@ class ImageSession:
 
     response = requests.get(IMAGES_API + category, headers={
       "Authorization": self.api_key,
-      "User-Agent": "pynepcord/1.0.0"
+      "User-Agent": "pynepcord/" + __version__
     })
     resp_json = response.json()
 
