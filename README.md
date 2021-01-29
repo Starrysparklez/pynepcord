@@ -3,6 +3,42 @@ PyNepCord is easy-to-use library that uses [NeppedAPI](https://api-docs.neppedco
  
 Check the `Docs` directory for getting started guide, usage examples and API reference.
 
+# Basic usage
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+from pynepcord.base import ImageSession
+
+
+if __name__ == '__main__':
+    key = 'your-api-token'
+    session = ImageSession(key) # Create a session to get images
+    image = session.get_image('happy') # get the image by the 'happy' category
+    print(image.url) # display the URL of the picture in the terminal
+```
+
+# async/await
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import asyncio
+from pynepcord.aio import ImageSession
+# pynepcord.base - the non-async version that uses `requests`.
+# pynepcord.aio - same, but uses `aiohttp` and async/await syntax.
+
+
+async def main():
+    key = 'your-api-token'
+    session = ImageSession(key)
+    image = await session.get_image('happy')
+    print(image.url)
+
+if __name__ == '__main__':
+    asyncio.run(main())
+```
+
 # License
 
 ```
