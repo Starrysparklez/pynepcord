@@ -23,7 +23,11 @@
 # SOFTWARE.
 
 
-IMAGES_API = "https://neppedcord.top/api/images/"
-SHARP_API = "https://neppedcord.top/api/sharp/user/"
+__version__ = "1.0.1"
+__author__ = "NellyD3v"
+__license__ = "MIT"
+
+IMAGES_API = "https://api.neppedcord.top/images/"
+SHARP_API = "https://api.neppedcord.top/sharp/user/"
 CATEGORIES = ("baka", "cry", "cuddle", "dance", "happy", "hug",
               "kiss", "pat", "poke", "sad", "smug", "wag")
